@@ -43,11 +43,17 @@ It uses the following conpcets:
     truffle migrate
     ```
 
-5. Run the webpack server for front-end hot reloading (outside the development console). Smart contract changes must be manually recompiled and migrated.
+6. Run the webpack server for front-end hot reloading (outside the development console). Smart contract changes must be manually recompiled and migrated.
     ```javascript
     // Serves the front-end on http://localhost:3000
     npm run start
     ```
+
+ 7. Do not forget to setup your metamask, you can read more on this [link](http://truffleframework.com/tutorials/truffle-and-metamask)
+ 
+
+
+
 
 
 
