@@ -1,7 +1,12 @@
 # king-of-the-hill-truffle-dapp
 
+
+
 This is a simple dapp that allow people pay to post their messages as, only the last message will be shown in the home
 and everytime the price to post a message increases.
+
+
+![alt text](http://g.recordit.co/BNyukKwkg9.gif)
 
 It uses the following conpcets:
 * react
