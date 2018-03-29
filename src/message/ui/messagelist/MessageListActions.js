@@ -9,6 +9,7 @@ const contract = require('truffle-contract')
  * this module contains all actions related to the KingOfHill smart contract
  */
 
+var firstTime = true;
 
 /**
  *
@@ -78,6 +79,18 @@ export function loadLastMessage(){
                 try{
                     let message = await kingOfHillInstance.getLastMessage({from: coinbase});
                     dispatch(loadLastMessageSuccess(message))
+                    if(firstTime){
+                        kingOfHillInstance.PublishMessage().watch(
+                            function(error, result){
+                                if (!error)
+                                {
+                                    dispatch(loadLastMessageSuccess(result.args.message))
+                                    dispatch(loadPriceSuccess(web3.fromWei(result.args.price,'ether')));
+                                }
+                            })
+                        firstTime = false;
+                    }
+
 
                 }
                 catch(err){
