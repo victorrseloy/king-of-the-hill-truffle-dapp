@@ -1,9 +1,13 @@
 pragma solidity ^0.4.2;
 
 import './zeppelin/lifecycle/Killable.sol';
+//utility function downloaded from github
 import './Strings.sol';
 
-
+/**
+* This smart contract contains the main logic to handle the king of hill application
+*
+*/
 contract KingOfHill is Killable{
     using strings for *;
     string[] public messages;
@@ -15,6 +19,13 @@ contract KingOfHill is Killable{
        uint price
     );
 
+    /*
+    * this function places a new message to the block chain
+    * it will validate if the sender has enough funds to place the message
+    * plus messages cannot contain "-" as this is the character that will be
+    * used to delimit the array with all the strings  
+    * @message - messgage to be posted
+    */
     function addMessage(string message)
     payable
     public
@@ -27,6 +38,10 @@ contract KingOfHill is Killable{
         PublishMessage(message,price);
     }
 
+    /**
+    * gets the current price to post a message
+    * @return the current price to post a message
+    */
     function getPrice()
     constant
     public
@@ -35,7 +50,10 @@ contract KingOfHill is Killable{
         return price;
     }
 
-
+    /**
+    * gets the current message
+    * @return the current message
+    */
     function getLastMessage()
     constant
     public
@@ -47,6 +65,12 @@ contract KingOfHill is Killable{
         return "No message yet";
     }
 
+    /**
+    * This method returns all the current messages contained on the contract as a single
+    * string delimited by -, we need to do this because solidity cannot return nested dynamic
+    * arrays
+    * @return - a single string deilimited by - 
+    */
     function getAllMessages()
     constant
     public

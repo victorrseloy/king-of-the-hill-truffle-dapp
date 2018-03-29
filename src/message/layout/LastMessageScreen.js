@@ -21,8 +21,7 @@ class LastMessageScreen extends Component {
 }
 
 
-const mapStateToProps = (state, ownProps) => {
-    console.log(state)
+const mapStateToProps = (state) => {
     return {
         lastMessage: state.message.lastMessage,
         price: state.message.price

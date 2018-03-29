@@ -3,10 +3,15 @@ import LastMessage from './../ui/messagelist/LastMessage'
 import OldMessagesList from './../ui/messagelist/OldMessagesList'
 import CurrentPrice from './../ui/messagelist/CurrentPrice'
 import { connect } from 'react-redux'
-import {addMessage} from './../ui/messagelist/MessageListActions'
+import {loadAllMessages} from './../ui/messagelist/MessageListActions'
 
 
 class AllMessagesScreen extends Component {
+
+    componentWillMount(){
+        this.props.getAllMessages();
+    }
+
     render() {
         return(
             <main className="container">
@@ -32,9 +37,8 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        addMessage: (name) => {
-            event.preventDefault();
-            dispatch(addMessage(name))
+        getAllMessages: () => {
+            dispatch(loadAllMessages())
         }
     }
 }
