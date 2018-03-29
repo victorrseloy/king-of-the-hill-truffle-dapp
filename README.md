@@ -17,9 +17,39 @@ It uses the following conpcets:
 * truffle
 * webpack
 
+## Installation
 
-![alt text](https://raw.githubusercontent.com/victorrseloy/king-of-the-hill-truffle-dapp/master/static/home.png)
+1. Install Truffle globally.
+    ```javascript
+    npm install -g truffle
+    ```
 
-![alt text](https://raw.githubusercontent.com/victorrseloy/king-of-the-hill-truffle-dapp/master/static/messages.png)
+2. Install the node dependencies.
+    ```javascript
+    npm install
+    ```
+
+3. install and run ganache
+    ```javascript
+    [https://github.com/trufflesuite/ganache(https://github.com/trufflesuite/ganache)
+    ```
+
+
+4. compile the contracts
+    ```javascript
+    truffle compile
+    ```
+
+5. deploy contracts
+    ```javascript
+    truffle migrate
+    ```
+
+5. Run the webpack server for front-end hot reloading (outside the development console). Smart contract changes must be manually recompiled and migrated.
+    ```javascript
+    // Serves the front-end on http://localhost:3000
+    npm run start
+    ```
+
 
 
