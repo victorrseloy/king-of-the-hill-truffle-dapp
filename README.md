@@ -6,7 +6,7 @@ This is a simple dapp that allow people pay to post their messages as, only the 
 and everytime the price to post a message increases.
 
 
-![alt text](http://g.recordit.co/BNyukKwkg9.gif)
+![alt text](https://raw.githubusercontent.com/victorrseloy/king-of-the-hill-truffle-dapp/master/static/recording.gif)
 
 It uses the following conpcets:
 * react
