@@ -30,9 +30,7 @@ It uses the following conpcets:
     ```
 
 3. install and run ganache
-    ```javascript
     [https://github.com/trufflesuite/ganache](https://github.com/trufflesuite/ganache)
-    ```
 
 
 4. compile the contracts
