@@ -2,6 +2,8 @@ import KingOfHillContract from '../../../../build/contracts/KingOfHill.json'
 import store from '../../../store'
 const contract = require('truffle-contract')
 
+//TODO: extract action types to a constant enum so it will be possible to avoid typos
+//TODO: extract action common async blocks to a single function and pass the chaning part as a callback
 
 /**
  * this module contains all actions related to the KingOfHill smart contract
